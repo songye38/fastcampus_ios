@@ -21,13 +21,4 @@ class ViewController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
 }
-    
-
-    @IBAction func hello(_ sender: Any) {
-        
-        let alert = UIAlertController(title: "helo", message: "home workd button", preferredStyle: .alert)
-        let action = UIAlertAction(title: "ok", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert,animated: true, completion: nil)
-    }
 }
