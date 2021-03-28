@@ -66,3 +66,25 @@ for i in closedRange {
     }
     print(i)
 }
+
+//for loop를 중첩으로 사용하기
+
+for i in closedRange {
+    for j in closedRange {
+        print("\(i) X \(j) = \(i * j)")
+    }
+}
+
+//switch
+
+let num1 = 10
+switch num1 {
+case 0:
+    print("--> 0 입니다.")
+case 0...10:
+    print("0부터 10사이 입니다.")
+case 10:
+    print("--> 10 입니다.")
+default :
+    print("나머지입니다. ")
+}
