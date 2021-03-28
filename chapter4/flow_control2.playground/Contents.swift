@@ -88,3 +88,39 @@ case 10:
 default :
     print("나머지입니다. ")
 }
+
+//string type swtich
+
+let pet = "bird"
+switch pet {
+case "dog", "cat", "bird":
+    print("집동물이네요?")
+default:
+    print("나머지입니다.")
+}
+
+//switch + where 함께 사용하기
+
+
+let number =  5
+switch number {
+case _ where number % 2 == 0 :
+    print("짝수입니다.")
+default:
+    print("홀수입니다.")
+}
+
+//switch 심화 + tuple
+let coordinate = (x:10, y:10)
+switch coordinate {
+case (0,0):
+    print("원점이네요.")
+case (let x,0):
+    print("x축이네요 \(x)")
+case (0,let y ):
+    print("y축이네요 \(y)")
+case (let x, let y) where x==y :
+    print("x==y")
+case (let x, let y):
+    print("x,y = \(x),\(y)")
+}
