@@ -83,25 +83,55 @@ print(number)
 //print(returnedName)
 
 //basic syntax
-func funcName(externalName param : paramType) -> returnType {
-    return returnValue
-}
+//func funcName(externalName param : paramType) -> returnType {
+//    return returnValue
+//}
 
 
 //overrode
 //같은 함수의 이름이 같지만 파라미터가 리턴이 다른 경우
 //같은 함수이름 다른 행동
-func printTotalPrice(price : Int, count : Int){
-    print("total price is : \(price * count)")
-}
-
-func printTotalPrice(price : Double, count : Double){
-    print("total price is : \(price * count)")
-}
-
-func printTotalPrice(가격 : Double, 갯수 : Double){
-    print("total price is : \(가격 * 갯수)")
-}
+//func printTotalPrice(price : Int, count : Int){
+//    print("total price is : \(price * count)")
+//}
+//
+//func printTotalPrice(price : Double, count : Double){
+//    print("total price is : \(price * count)")
+//}
+//
+//func printTotalPrice(가격 : Double, 갯수 : Double){
+//    print("total price is : \(가격 * 갯수)")
+//}
 
 //In-Out parameter
+//파라미터로 들어온 값을 직접 변경하고 싶을 때
 
+var value = 3
+func incrementAndPrint(_ value : inout Int){
+    value += 1
+    print(value)
+}
+
+//incrementAnd(&value)
+
+//Function as a param
+func add(_ a : Int, b : Int)->Int{
+    return a + b
+}
+func subtract(_ a : Int, b : Int)->Int{
+    return a - b
+}
+
+var function  = add
+function(4,2)
+function = subtract
+function(4,2)
+
+//파라미터로 들어오는 함수의 타입이 같아야 함
+func printResult(_ function:(Int, Int)->Int, _ a : Int, _ b :Int){
+    let result = function(a,b)
+    print(result)
+}
+
+printResult(add,3,4)
+printResult(subtract,5,3)
