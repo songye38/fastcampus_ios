@@ -57,3 +57,27 @@ func returnPrice(price : Int, count : Int) -> Int{
 
 var number = returnPrice(price : 3000, count : 2)
 print(number)
+
+//1. 성, 이름을 받아서 fullname 출력하는 함수
+//2. 1번에서 만든 함수인데 파라미터 이름을 제거하고 fullname 출력하는 함수
+//3. 성, 이름을 받아서 fullname return 하는 함수 만들기
+
+//1.
+//func returnName(firstaName : String, lastName : String){
+//    print("firstname : \(firstaName), lastname : \(firstaName)")
+//}
+//
+//returnName(firstaName: "Park", lastName: "songye")
+
+//func returnName(_ firstaName : String, _ lastName : String){
+//    print("firstname : \(firstaName), lastname : \(firstaName)")
+//}
+//
+//returnName("park","songye")
+
+func returnName(_ firstaName : String, _ lastName : String) -> String{
+    let name = "firstname : \(firstaName), lastname : \(firstaName)"
+    return name
+}
+let returnedName = returnName("park","songye")
+print(returnedName)
