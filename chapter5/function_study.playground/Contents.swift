@@ -75,9 +75,33 @@ print(number)
 //
 //returnName("park","songye")
 
-func returnName(_ firstaName : String, _ lastName : String) -> String{
-    let name = "firstname : \(firstaName), lastname : \(firstaName)"
-    return name
+//func returnName(_ firstaName : String, _ lastName : String) -> String{
+//    let name = "firstname : \(firstaName), lastname : \(firstaName)"
+//    return name
+//}
+//let returnedName = returnName("park","songye")
+//print(returnedName)
+
+//basic syntax
+func funcName(externalName param : paramType) -> returnType {
+    return returnValue
 }
-let returnedName = returnName("park","songye")
-print(returnedName)
+
+
+//overrode
+//같은 함수의 이름이 같지만 파라미터가 리턴이 다른 경우
+//같은 함수이름 다른 행동
+func printTotalPrice(price : Int, count : Int){
+    print("total price is : \(price * count)")
+}
+
+func printTotalPrice(price : Double, count : Double){
+    print("total price is : \(price * count)")
+}
+
+func printTotalPrice(가격 : Double, 갯수 : Double){
+    print("total price is : \(가격 * 갯수)")
+}
+
+//In-Out parameter
+
