@@ -28,4 +28,33 @@ operateTwoNum(a:4, b:2, operation: multiplyClosure)
 //
 //operateTwoNum(a: 4, b: 2, {a, b in return a / b})
 
+//인풋도 아웃풋도 없는 이름 없는 메소드
+let voidClosure1  : ()-> Void = {
+    print("hello world")
+}
+
+let voidClosure : (Int, Int) ->Int = { a, b in
+    return a + b
+    
+}
+
+let voidClosure2 = {
+    print("hello wolddfjskfljslkdfs")
+}
+
+
+voidClosure1()
+voidClosure2()
+
+//closure capturing
+
+var count = 0
+let incrementer = {
+    count += 1
+}
+
+incrementer()
+incrementer()
+incrementer()
+count
 
