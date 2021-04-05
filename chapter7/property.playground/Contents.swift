@@ -22,22 +22,34 @@ struct Person{
         }
     }()
     
-    var fullName : String {  //computed property => read only
-        get {
-            return "\(firstName) \(lastName)"
-        }
-        set {
-            if let firstName = newValue.components(separatedBy: " ").first {
-                self.firstName = firstName
-            }
-            if let lastName = newValue.components(separatedBy: " ").last {
-                self.lastName = lastName
-            }
-        }
+//    var fullName : String {  //computed property => read only
+//        get {
+//            return "\(firstName) \(lastName)"
+//        }
+//        set {
+//            if let firstName = newValue.components(separatedBy: " ").first {
+//                self.firstName = firstName
+//            }
+//            if let lastName = newValue.components(separatedBy: " ").last {
+//                self.lastName = lastName
+//            }
+//        }
+//    }
+    
+//    var fullName : String {
+//        return "\(firstName)"
+//    }
+//
+    func fullName()->String {
+        return "\(firstName)"
     }
     
     static let isAlien : Bool = false  //type property
 }
+
+//property : 호출시 저장된 값을 하나 반환한다.
+//method : 호출시 어떤 작업을 한다.
+//method가 값을 반환한다면?
 
 //인스턴스 만들기
 var person1 = Person(firstName: "songye", lastName: "park")
