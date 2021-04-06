@@ -71,3 +71,12 @@ extension Int {
 
 value.square()
 value.half()
+
+extension Int {
+    func square()->Int {
+        return self * self
+    }
+    func half()->Int {
+        return self / 2
+    }
+}
