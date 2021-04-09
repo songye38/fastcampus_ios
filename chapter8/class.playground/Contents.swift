@@ -72,5 +72,9 @@ personClass1 = personClass2
 print(personClass1.firstName)
 print(personClass2.firstName)
 
+//1. 일단 struct로 쓰자
+//2. 나중에 필요하면 class로 바꿔서 쓰자 .
+//3. swift는 struct를 좋아한다. 
+
 
 
