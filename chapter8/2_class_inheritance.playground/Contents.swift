@@ -39,9 +39,58 @@ jason.printMyName()
 
 let math = Grade(letter: "B", points: 8.5, credits: 3)
 let history = Grade(letter: "A", points: 10.0, credits: 3)
-jason.grades.append(contentsOf: [math])
+jason.grades.append(math)
+jason.grades.append(history)
 
 jason.grades.count
+
+
+//상속 더 깊게 이해하기
+class StudentAthelet : Student {
+    var minimumTrainingTime : Int  = 2
+    var trainedTime : Int = 0
+    
+    func train(){
+        trainedTime += 1
+    }
+}
+
+// 운동선수인데 축구선수
+class FootballPlayer : StudentAthelet {
+    var footballTeam = "FC Swift"
+    
+    override func train() {
+        trainedTime += 2 //한번 운동할 때 마다 2시간씩 운동을 한다.
+    }
+}
+
+// Person -> Student -> Athelete -> Football Player
+
+var athelete1 = StudentAthelet(firstName: "Yuna", lastName: "Kim")
+var athelete2 = FootballPlayer(firstName: "Heung", lastName: "Son")
+
+
+athelete1.grades.append(math)
+athelete2.grades.append(math)
+
+athelete1.minimumTrainingTime
+athelete2.minimumTrainingTime
+
+athelete2.footballTeam
+
+athelete1.train()
+athelete1.trainedTime
+
+athelete2.train()
+athelete2.trainedTime
+
+athelete1 = athelete2 as StudentAthelet
+athelete1.train()
+athelete1.trainedTime
+
+
+
+
 
 
 
