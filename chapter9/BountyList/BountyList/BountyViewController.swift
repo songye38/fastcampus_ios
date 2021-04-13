@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BountyViewController: UIViewController {
+class BountyViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +15,26 @@ class BountyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //UITableViewDataSource에 대한 프로토콜 대답을 주는 것
+    //데이터 몇개를 보여줄꺼니?
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
-    */
+    
+    
+    //그 데이터를 어떻게 표현할꺼니?
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",for: indexPath)
+        return cell
+    }
+    
+    
+    //UITableViewDelegate에 대한 프로토콜 대답을 주는 것
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       print("-->\(indexPath)")
+    }
+    
+    
+    
 
 }
