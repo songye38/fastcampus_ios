@@ -28,13 +28,24 @@ class BountyViewController: UIViewController,UITableViewDataSource,UITableViewDe
         return cell
     }
     
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var bountyLabel: UILabel!
+    
     
     //UITableViewDelegate에 대한 프로토콜 대답을 주는 것
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        print("-->\(indexPath)")
     }
-    
-    
-    
-
 }
+
+
+
+
+
+//
+//class ListCell : UITableViewCell {
+//    @IBOutlet weak var imgView: UIImageView!
+//    @IBOutlet weak var nameLabel: UILabel!
+//    @IBOutlet weak var bountyLabel: UILabel!
+//}
