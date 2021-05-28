@@ -372,3 +372,7 @@ let student3 = StudentAthlete(name:"Mike")ㅌㄴ
 let student1 = Student(firstName: "Jason", lastName: "Lee")
 let student2 = StudentAthlete(firstName: "Jay", lastName: "Lee", sports: ["football"])
 let student3 = StudentAthlete(name:"Mike")ㅌㄴ
+
+let student1 = Student(firstName: "Jason", lastName: "Lee")
+let student2 = StudentAthlete(firstName: "Jay", lastName: "Lee", sports: ["football"])
+let student3 = StudentAthlete(name:"Mike")ㅌㄴ
